@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/off_white"
+    tools:context=".MainActivity">
+
+    <Toolbar
+        android:id="@+id/toolAct1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="My Board"
+            android:textColor="@color/green"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </Toolbar>
+
+    <LinearLayout
+        android:id="@+id/linearact1Filters"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolAct1"
+        android:layout_margin="2dp"
+        android:orientation="horizontal"
+        android:padding="2dp">
+
+        <TextView
+            android:id="@+id/fAct1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/light_red"
+            android:text="Filter 1" />
+
+        <TextView
+            android:id="@+id/fAct2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/light_red"
+            android:text="Filter 2" />
+
+        <TextView
+            android:id="@+id/fAct3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/light_red"
+            android:text="Filter 3" />
+
+        <TextView
+            android:id="@+id/fAct4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/light_red"
+            android:text="Filter 4" />
+    </LinearLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linearact1Filters"
+        android:layout_marginTop="5dp"
+        app:tabIconTint="@color/green"
+        app:tabIndicatorColor="@color/green"
+        app:tabTextColor="@color/green"
+        tools:ignore="SpeakableTextPresentCheck">
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewerpager"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_below="@id/tabLayout"
+        android:layout_marginTop="5dp"
+        android:background="@color/white" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/viewerpager"
+        android:layout_marginLeft="242dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/green"
+        android:backgroundTint="@color/green"
+        android:src="@drawable/filter_real_3"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+
+</RelativeLayout>

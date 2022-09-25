@@ -1,0 +1,52 @@
+package com.example.homeassignment;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.app.DownloadManager;
+import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+public class MyBoard_2 extends AppCompatActivity {
+private TextView board2Desc;
+private ImageView board2IVarrow;
+private Button button;
+private DownloadManager downloadManager;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_my_board2);
+        board2Desc=findViewById(R.id.board2Desc);
+        board2IVarrow=findViewById(R.id.board2IVarrow);
+        button=findViewById(R.id.boardDownLoadBtn);
+
+        Intent i=getIntent();
+        String desc=i.getStringExtra("desc");
+        board2Desc.setText(desc);
+
+        board2IVarrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent=new Intent(getApplicationContext(),MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
+     button.setOnClickListener(new View.OnClickListener() {
+         @Override
+         public void onClick(View view) {
+             downloadManager=(DownloadManager) getSystemService(Context.DOWNLOAD_SERVICE);
+             Uri uri=Uri.parse("https://www.computernetworkingnotes.com/linux-tutorials/network-configuration-files-in-linux-explained.html");
+             DownloadManager.Request request=new DownloadManager.Request(uri);
+             request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
+             Long reference=downloadManager.enqueue(request);
+         }
+     });
+
+    }
+}
