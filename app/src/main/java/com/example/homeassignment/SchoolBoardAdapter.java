@@ -42,11 +42,12 @@ public class SchoolBoardAdapter extends RecyclerView.Adapter<SchoolBoardAdapter.
   holder.schoolBoardDesc.setText(modelList.get(position).getDescription());
   holder.schoolBoardClass.setText(modelList.get(position).getGrade());
   holder.schoolBoardDate.setText(modelList.get(position).getDate());
+  String desc=modelList.get(position).getDescription();
   holder.itemView.setOnClickListener(new View.OnClickListener() {
       @Override
       public void onClick(View view) {
           Intent schoolIntent=new Intent(context, School_2.class);
-          schoolIntent.putExtra("description",modelList.get(position).getDescription());
+          schoolIntent.putExtra("description",desc);
           context.startActivity(schoolIntent);
 
       }
