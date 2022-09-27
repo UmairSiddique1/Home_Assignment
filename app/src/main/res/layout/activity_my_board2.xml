@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/light"
     tools:context=".MyBoard_2">
 
     <Toolbar
@@ -13,7 +14,7 @@
         android:layout_marginStart="3dp"
         android:layout_marginTop="3dp"
         android:layout_marginEnd="3dp"
-        android:layout_marginBottom="3dp"
+        android:layout_marginBottom="1dp"
         android:background="@color/white"
         android:padding="3dp">
 
@@ -26,7 +27,6 @@
                 android:id="@+id/board2IVarrow"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@color/green"
                 android:src="@drawable/back_arrow" />
 
             <TextView
@@ -40,10 +40,87 @@
     </Toolbar>
 
     <LinearLayout
-        android:id="@+id/linearboard2Desc"
+        android:id="@+id/board2Task"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/board2Tool"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="1dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:padding="4dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Task by  " />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Shiraz Syed Ali"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="Date  " />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="22-09-2022"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/board2Subject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/board2Task"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="4dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:padding="4dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Subject  " />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/light_red"
+            android:text="Physics"
+            android:textColor="@color/dark_red"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="70dp"
+            android:text="Grade  " />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/light_green"
+            android:text="Class 1"
+            android:textColor="@color/dark_green"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linearboard2Desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/board2Subject"
         android:layout_marginLeft="3dp"
         android:layout_marginTop="5dp"
         android:layout_marginRight="3dp"
@@ -117,7 +194,7 @@
         <ImageView
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:src="@drawable/docs_logo2_real" />
+            android:src="@drawable/light_blue_doc_2" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -135,7 +212,7 @@
         android:layout_marginLeft="35dp"
         android:layout_marginTop="3dp"
         android:layout_marginRight="6dp"
-        android:background="@color/light_red"
+        android:background="@color/red"
         android:orientation="horizontal"
         android:paddingLeft="6dp"
         android:id="@+id/linearboard2Quest2"
@@ -144,7 +221,7 @@
         <ImageView
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:src="@drawable/docs_logo3_real"
+            android:src="@drawable/light_red_doc_2"
             />
         <TextView
             android:layout_width="match_parent"
@@ -156,11 +233,11 @@
     </LinearLayout>
 
     <androidx.appcompat.widget.AppCompatButton
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
         android:id="@+id/boardDownLoadBtn"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
         android:layout_below="@id/linearboard2Quest2"
-        android:layout_marginLeft="90dp"
+        android:layout_marginLeft="60dp"
         android:layout_marginTop="20dp"
         android:background="@color/green"
         android:text="Download File"

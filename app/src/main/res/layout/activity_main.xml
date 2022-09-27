@@ -4,19 +4,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/off_white"
+    android:background="@color/light"
     tools:context=".MainActivity">
 
     <Toolbar
         android:id="@+id/toolAct1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/white">
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="2dp"
+        android:background="@color/white"
+        android:padding="2dp">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/drag" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
             android:text="My Board"
             android:textColor="@color/green"
             android:textSize="18sp"
@@ -28,37 +37,61 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/toolAct1"
-        android:layout_margin="2dp"
+       android:layout_margin="1dp"
         android:orientation="horizontal"
-        android:padding="2dp">
+        android:padding="1dp">
 
         <TextView
             android:id="@+id/fAct1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@color/light_red"
+            android:background="@color/light_blue"
             android:text="Filter 1" />
 
         <TextView
             android:id="@+id/fAct2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@color/light_red"
+            android:background="@color/light_blue"
             android:text="Filter 2" />
 
         <TextView
             android:id="@+id/fAct3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@color/light_red"
+            android:background="@color/light_blue"
             android:text="Filter 3" />
 
         <TextView
             android:id="@+id/fAct4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@color/light_red"
+            android:background="@color/light_blue"
             android:text="Filter 4" />
+        <TextView
+            android:id="@+id/fAct5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/light_blue"
+            android:text="Filter 5" />
+        <TextView
+            android:id="@+id/fAct6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/light_blue"
+            android:text="Filter 6" />
+        <TextView
+            android:id="@+id/fAct7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/light_blue"
+            android:text="Filter 7" />
+        <TextView
+            android:id="@+id/fAct8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/light_blue"
+            android:text="Filter 8" />
     </LinearLayout>
 
     <com.google.android.material.tabs.TabLayout
@@ -69,7 +102,7 @@
         android:layout_marginTop="5dp"
         app:tabIconTint="@color/green"
         app:tabIndicatorColor="@color/green"
-        app:tabTextColor="@color/green"
+        app:tabTextColor="@color/black"
         tools:ignore="SpeakableTextPresentCheck">
 
     </com.google.android.material.tabs.TabLayout>
@@ -77,9 +110,9 @@
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/viewerpager"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="302dp"
         android:layout_below="@id/tabLayout"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="2dp"
         android:background="@color/white" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -87,8 +120,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/viewerpager"
-        android:layout_marginLeft="242dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginLeft="247dp"
+        android:layout_marginTop="6dp"
         android:background="@color/green"
         android:backgroundTint="@color/green"
         android:src="@drawable/filter_real_3"

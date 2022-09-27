@@ -30,11 +30,15 @@ private AutoCompleteTextView autoCompleteTextView;
 private Spinner spinner;
 private static final String[] classes=new String[]{"Class 1","Class 2","Class 3"};
 private ArrayAdapter<String> arrayAdapter;
-private RadioButton allpost,assignmentRadio,homeworkRadio,weeklyPlan;
+private RadioButton allpost,assignmentRadio,homeworkRadio,weeklyPlan,dlp,lesson,getWeeklyPlan,external;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_filters);
+        dlp=findViewById(R.id.dlpRadio);
+        lesson=findViewById(R.id.lessonRadio);
+        getWeeklyPlan=findViewById(R.id.exWeeklyRadio);
+        external=findViewById(R.id.externalRadio);
         allpost=findViewById(R.id.radioAllPost);
         assignmentRadio=findViewById(R.id.attachmentRadio);
         homeworkRadio=findViewById(R.id.homeWorkRadio);
@@ -77,6 +81,26 @@ private RadioButton allpost,assignmentRadio,homeworkRadio,weeklyPlan;
                    Intent d=new Intent(getApplicationContext(),MainActivity.class);
                    d.putExtra("weeklyRadio",weeklyPlan.getText().toString());
                    startActivity(d);
+               }
+               if(dlp.isChecked()){
+                   Intent e=new Intent(getApplicationContext(),MainActivity.class);
+                   e.putExtra("dlp",dlp.getText().toString());
+                   startActivity(e);
+               }
+               if(lesson.isChecked()){
+                   Intent f=new Intent(getApplicationContext(),MainActivity.class);
+                   f.putExtra("lesson",lesson.getText().toString());
+                   startActivity(f);
+               }
+               if(getWeeklyPlan.isChecked()){
+                   Intent g=new Intent(getApplicationContext(),MainActivity.class);
+                   g.putExtra("getweek",getWeeklyPlan.getText().toString());
+                   startActivity(g);
+               }
+               if(external.isChecked()){
+                   Intent h=new Intent(getApplicationContext(),MainActivity.class);
+                   h.putExtra("external",external.getText().toString());
+                   startActivity(h);
                }
            }
        });

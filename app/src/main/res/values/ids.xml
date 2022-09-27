@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="titleMyBoardTV" type="id" />
+    <item name="myBoardDescription" type="id" />
+    <item name="myBoardClass" type="id" />
+</resources>

@@ -6,66 +6,69 @@
     app:cardCornerRadius="5dp"
     android:layout_gravity="center"
    >
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <ImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:id="@+id/teamBoardIV"
-            android:layout_margin="2dp"
-            android:padding="2dp"
-            />
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/l1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="3dp"
+            android:layout_marginBottom="3dp"
+            android:orientation="horizontal"
+            android:padding="3dp">
+
+            <ImageView
+                android:id="@+id/teamBoardIV"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/teamBoardTitleTV"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="3dp"
+                android:text="My Board 1"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@id/l1"
+            android:layout_marginLeft="44dp"
             android:orientation="vertical">
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/teamBoardTitleTV"
-                android:layout_margin="2dp"
-                android:padding="2dp"
-                android:ellipsize="marquee"
-                android:maxLines="2"
-                android:textStyle="bold"
-                android:textSize="18sp"
-                />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ellipsize="end"
-                android:maxLines="2"
                 android:id="@+id/teamBoardDescription"
-                android:layout_margin="2dp"
-                android:padding="2dp"
+                android:text="bla bla bla bla bla bla bla bla bla bla bla bla"
 
+                android:maxLines="2"
+                android:ellipsize="end"
                 />
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="2dp"
-                    android:padding="2dp"
-                    android:id="@+id/teamBoardDate"
-                    />
-            </LinearLayout>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="2dp"
-                android:width="2dp"
+                android:layout_marginTop="2dp"
+                android:id="@+id/teamBoardDate"
+                android:text="22 22 22"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
                 android:textColor="@color/green"
                 android:id="@+id/teamBoardClass"
-                />
-
+                android:text="class 1"/>
         </LinearLayout>
 
 
 
-    </LinearLayout>
+    </RelativeLayout>
 </androidx.cardview.widget.CardView>
